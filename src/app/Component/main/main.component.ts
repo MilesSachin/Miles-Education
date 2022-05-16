@@ -15,10 +15,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
   facultyData(val:any){
-    const param : any= {"page":1,"limit":200,"filter":{"status":[1]}};
     if(val == 2){
       this.router.navigate(['faculty/partTime'])
-      
     }
     else{
       this.router.navigate(['faculty/fullTime'])

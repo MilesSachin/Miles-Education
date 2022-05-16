@@ -5,8 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes=[
-  {path:':fullTime', component:FacultyComponent},
-  {path:':partTime', component:FacultyComponent},
+  {path:':type', component:FacultyComponent},
 ]
 
 @NgModule({

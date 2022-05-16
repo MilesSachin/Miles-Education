@@ -14,13 +14,11 @@ export class FacultyService {
 
   fullTime(param:any){
     this.http.post(this.url+"getFulltimeAcademicTeamList", param).subscribe((res:any)=>{
-      console.log(res)
       this.facultyListDataObserver.next(res.data);
     })
   }
   partTime(param:any){
     this.http.post(this.url+"getParttimeAcademicTeamList", param).subscribe((res:any)=>{
-      console.log(res)
       this.facultyListDataObserver.next(res.data);
     })
   }
