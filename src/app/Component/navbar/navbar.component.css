@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+}
+.navbar{
+    width: 100vw;
+}
+.active-link{
+    color: blue;
+}

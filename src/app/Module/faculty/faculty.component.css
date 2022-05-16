@@ -1,0 +1,108 @@
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-head {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .header-content {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #677788;
+  }
+
+  .matlabmiles {
+    margin-top: -53px;
+    background: url('https://res.cloudinary.com/duthqxswg/image/upload/v1647845184/MilesEducationWebsite/Faculty/matlab-bg.png');
+    background-repeat: no-repeat;
+    height: 237px;
+    background-position: center;
+  }
+
+  .info-button {
+    background: white;
+    color: #0044BA;
+    text-transform: none;
+    width: 288px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .circle {
+    position: absolute;
+    top: 6%;
+    left: 48.75%;
+  }
+
+  .img-bg {
+    background-color: #FFD500;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+  }
+
+  .card {
+    min-height: 290px;
+    padding: 20px 10px 10px 10px;
+    width: 95%;
+    box-shadow: 0px 3px 26px #527AFD26;
+    border-radius: 20px;
+    border: none;
+  }
+
+  .facultyimage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .faculty-name {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .faculty-content {
+    font-size: 12px;
+    height: 50px;
+    line-height: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 0px !important;
+  }
+
+  .icon {
+    font-size: 22px;
+    margin: 0px 0px;
+  }
+
+  .prof-desg {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #707070;
+  }
+
+  .prof-content {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #677788;
+  }
+.faculty{
+  width: 100%;
+}

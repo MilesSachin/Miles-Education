@@ -1,0 +1,41 @@
+<div class="faculty">
+    <div class="pb-5 " style="background-color: #F6F7FA;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 pt-5" *ngFor="let item of spocList">
+                    <div class="card text-center">
+                        <img [src]="item.photo" alt=" Image" class="facultyimage"
+                            style="margin-left: auto; margin-right: auto;">
+                        <p class="faculty-name">{{item.name}}</p>
+                        <p class="faculty-content">{{item.designation_line1}}</p>
+                        <p class="faculty-content">{{item.designation_line2}}</p>
+                        <p class="faculty-content">{{item.designation_line3}}</p>
+                        <div class="d-flex align-items-start justify-content-between position-relative">
+                            <ng-container *ngIf="item.linkedin_url">
+                                <a [href]="item.linkedin_url" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!item.linkedin_url">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="fab fa-linkedin-in" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="item.email">
+                                <a href="{{'mailto:'+item.email}}" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="far fa-envelope" style="color: #EA4335;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!item.email">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="far fa-envelope" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
