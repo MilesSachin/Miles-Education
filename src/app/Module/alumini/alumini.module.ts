@@ -4,7 +4,6 @@ import { AluminiComponent } from './alumini.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes : Routes=[
-  // {path:'', pathMatch:'full', component:AluminiComponent},
   {path:':course', component:AluminiComponent}
 ]
 

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light fs-4" style="background-color: #e3f2fd;">
     <div class="container ">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink="main">
             <img src="https://res.cloudinary.com/duthqxswg/image/upload/q_auto:low/MilesEducationWebsite/MilesEducation_Logos/MilesEducation_Logo_New.png"
                 alt="" width="155" height="64">
         </a>
@@ -12,8 +12,8 @@
                         Faculty
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" (click)="facultyData(2)">Part Time</a></li>
-                        <li><a class="dropdown-item" (click)="facultyData(1)">Full Time</a></li>
+                        <li><a class="dropdown-item" routerLink="faculty/partTime">Part Time</a></li>
+                        <li><a class="dropdown-item" routerLink="faculty/fullTime">Full Time</a></li>
                     </ul>
                 </li>
                 <li style="padding: 0px 10px;" class="nav-item dropdown">

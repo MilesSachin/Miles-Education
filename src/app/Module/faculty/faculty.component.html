@@ -7,9 +7,8 @@
                         <img [src]="item.photo" alt=" Image" class="facultyimage"
                             style="margin-left: auto; margin-right: auto;">
                         <p class="faculty-name">{{item.name}}</p>
-                        <p class="faculty-content">{{item.designation_line1}}</p>
-                        <p class="faculty-content">{{item.designation_line2}}</p>
-                        <p class="faculty-content">{{item.designation_line3}}</p>
+                        <button type="button" class="btn btn-outline-info" data-swal-template="#myTemplate" (click)="openVerticallyCentered(item)">View More..</button>
+                        
                         <div class="d-flex align-items-start justify-content-between position-relative">
                             <ng-container *ngIf="item.linkedin_url">
                                 <a [href]="item.linkedin_url" target="_blank" mdbWavesEffect class="icon mx-2">

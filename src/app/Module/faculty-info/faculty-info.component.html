@@ -1,0 +1,13 @@
+<div class="container py-2 text-primary" style="background-color: #e3f2fd;">
+    <div class="modal-header m-2 text-success">
+        <h4 class="modal-title">Name: {{spocData.name}}</h4>
+    </div>
+    <div class="modal-body m-2 text-secondary">
+        <h5>designation 1: {{spocData.des1}}</h5>
+        <h5>designation 2: {{spocData.des2}}</h5>
+        <h5>designation 3: {{spocData.des3}}</h5>
+    </div>
+    <div class="modal-footer m-2">
+        <button type="button" class="btn btn-warning" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+</div>

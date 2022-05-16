@@ -3,7 +3,8 @@ a{
 }
 .navbar{
     width: 100vw;
+    position:sticky;
 }
 .active-link{
-    color: blue;
+    color: #5d77a5;
 }
