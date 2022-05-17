@@ -1,0 +1,26 @@
+<div class="container">
+    <div class=" faculty">
+        <div class="filter">
+            <div class="d-flex select justify-center">
+                <ng-select  [items]="company" [(ngModel)]="selectedCompany" placeholder="Select Company"  bindLabel="company_lable"  bindValue=company_value class="company" (change)="jobsList()">
+                </ng-select>
+                <ng-select [items]="location" [(ngModel)]="selectedLocation" placeholder="Select Location" bindLabel="city_lable"  bindValue="city_value" class="location" (change)="jobsList()">
+                </ng-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 pt-5" *ngFor="let item of spocList">
+                <div class="card text-center">
+                    <img [src]="company_img+item.company_logo" alt=" Image" class="facultyimage"
+                        style="margin-left: auto; margin-right: auto;">
+                    <p class="faculty-name"><strong> Job Role : </strong>{{item.job_role}}</p>
+                    <p class="faculty-name"><strong> Job Functional Category :
+                        </strong>{{item.job_functional_category}}</p>
+                    <p class="faculty-name"><strong> Location : </strong>{{item.location}}</p>
+                    <p class="faculty-name"><strong> Qualifications : </strong>{{item.qualification}}</p>
+                    <button class="text-white py-2 apply">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

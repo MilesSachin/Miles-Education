@@ -6,7 +6,8 @@ const routes: Routes = [
   {path:'', redirectTo:'main', pathMatch:'full'},
   {path:'main', component:MainComponent  },
   {path:'faculty', loadChildren:()=>import('./Module/faculty/faculty.module').then(m=>m.FacultyModule)},
-  {path:'alumini', loadChildren:()=>import('./Module/alumini/alumini.module').then(m=>m.AluminiModule)}
+  {path:'alumini', loadChildren:()=>import('./Module/alumini/alumini.module').then(m=>m.AluminiModule)},
+  {path:'jobs', loadChildren:()=>import('./Module/jobs/jobs.module').then(m=>m.JobsModule)}
 ];
 
 @NgModule({

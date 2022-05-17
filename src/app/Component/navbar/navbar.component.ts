@@ -17,13 +17,7 @@ export class NavbarComponent implements OnInit {
        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
        this.router.onSameUrlNavigation = 'reload';
        this.router.navigate([currentUrl]);
-  }
-  course(val:any){
-    if(val == 2){
-      this.router.navigate(['alumini/CMA'])
-    }
-    else{
-      this.router.navigate(['alumini/CPA'])
-      }
+       console.log(val);
+       
   }
 }
