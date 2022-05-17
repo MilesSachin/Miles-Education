@@ -1,0 +1,26 @@
+.facultyimage {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    left: -15%;
+    top: 5%;
+    position: absolute;
+}
+
+.modal-body {
+    margin-left: 5%;
+}
+
+li{
+    background-color: #0044BA;
+    color: #fff;
+    padding: 25px 0;
+    border-bottom: 2px solid white;
+    font-weight: 700;
+    font-size: 20px;
+}
+i{
+    font-size: 24px;
+}

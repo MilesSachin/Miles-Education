@@ -22,5 +22,13 @@ export class MainComponent implements OnInit {
       this.router.navigate(['faculty/fullTime'])
       }
   }
+  course(val:any){
+    if(val == 2){
+      this.router.navigate(['alumini/CMA'])
+    }
+    else{
+      this.router.navigate(['alumini/CPA'])
+      }
+  }
 }
 

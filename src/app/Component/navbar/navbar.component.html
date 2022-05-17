@@ -12,8 +12,8 @@
                         Faculty
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" routerLink="faculty/partTime">Part Time</a></li>
-                        <li><a class="dropdown-item" routerLink="faculty/fullTime">Full Time</a></li>
+                        <li><a class="dropdown-item" (click)="redirectTo('faculty/partTime')">Part Time</a></li>
+                        <li><a class="dropdown-item" (click)="redirectTo('faculty/fullTime')">Full Time</a></li>
                     </ul>
                 </li>
                 <li style="padding: 0px 10px;" class="nav-item dropdown">
@@ -22,8 +22,8 @@
                         Alumini
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">CPA</a></li>
-                        <li><a class="dropdown-item" href="#">CMA</a></li>
+                        <li><a class="dropdown-item" (click)="redirectTo('alumini/CPA')">CPA</a></li>
+                        <li><a class="dropdown-item" (click)="redirectTo('alumini/CMA')">CMA</a></li>
                     </ul>
                 </li>
             </ul>

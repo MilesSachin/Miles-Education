@@ -1,0 +1,62 @@
+<div class="container ">
+    <div class="modal-header ">
+        <h2>{{spocData.name}}'s Testimonial</h2>
+        <button type="button" class="btn-close" aria-label="Close"
+            (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-9">
+                <img [src]="photo+spocData.testimonial_img" alt="" class="facultyimage">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h4>{{spocData.name}} {{spocData.middle_name}}{{spocData.last_name}}</h4>
+                        <hr>
+                        <h5>{{spocData.designation}}, {{spocData.organization}}</h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex justify-content-between position-relative" style="padding-top: 30%;">
+                            <ng-container *ngIf="spocData.linkedin_url">
+                                <a [href]="spocData.linkedin_url" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!spocData.linkedin_url">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="fab fa-linkedin-in" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="spocData.email">
+                                <a href="{{'mailto:'+spocData.email}}" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="far fa-envelope" style="color: #EA4335;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!spocData.email">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="far fa-envelope" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <p class="py-3">{{spocData.miles_comment}}</p>
+                </div>
+                <h5 style="color: #0044BA;">Cleared {{spocData.course | uppercase}} in {{spocData.month}},{{spocData.year}}
+                </h5>
+            </div>
+            <div class="col-lg-3">
+                <ul *ngIf="spocData.course=='cpa'" class="d-flex flex-column justify-content-between align-items-stretch text-center" style="list-style: none;">
+                    <li>AUD <br>{{spocData.aud}}</li>
+                    <li>BEC <br>{{spocData.bec}}</li>
+                    <li>FAR <br>{{spocData.far}}</li>
+                    <li>REG <br>{{spocData.reg}}</li>
+                </ul>
+                <ul *ngIf="spocData.course=='cma'" class="d-flex flex-column justify-content-between align-items-stretch text-center" style="list-style: none;">
+                    <li>CMA1 <br>{{spocData.cma1}}</li>
+                    <li>CMA2 <br>{{spocData.cma2}}</li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

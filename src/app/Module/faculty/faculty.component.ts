@@ -22,12 +22,12 @@ export class FacultyComponent implements OnInit {
   constructor(private facultyService: FacultyService, private route: ActivatedRoute, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => this.myParam = params['type']);
-    // console.log(this.myParam);
     this.facultyData();
   }
 
   facultyData() {
+    this.route.params.subscribe((params: Params) => this.myParam = params['type']);
+    this.spocList = [];
     const param: any = { "page": 1, "limit": 200, "filter": { "status": [1] } };
     if (this.myParam == 'partTime') {
       this.facultyService.partTime(param);

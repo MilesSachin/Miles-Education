@@ -12,4 +12,18 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  redirectTo(val:any){
+       let currentUrl = val;
+       this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+       this.router.onSameUrlNavigation = 'reload';
+       this.router.navigate([currentUrl]);
+  }
+  course(val:any){
+    if(val == 2){
+      this.router.navigate(['alumini/CMA'])
+    }
+    else{
+      this.router.navigate(['alumini/CPA'])
+      }
+  }
 }

@@ -1,1 +1,50 @@
-<p>alumini works!</p>
+<div class="container">
+    <div class="pb-5 faculty">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 pt-5 " *ngFor="let item of spocList">
+                    <div class="card text-center my-2">
+                        <img [src]="photo+item.testimonial_image" alt="" class="facultyimage"
+                            style="margin-left: auto; margin-right: auto;">
+                        <p class="faculty-name">{{item.name}}&nbsp;{{item.middle_name}}&nbsp;{{item.last_name}}</p>
+                        <!-- <p>Gender: {{item.gender==1?'male':item.gender==2?'female':item.gender}}</p> -->
+                        <!-- <p>Batch Date: {{item.batch_month}}&nbsp;{{item.batch_date}}</p>
+                        <p>City: {{item.state_city}}</p>
+                        <p>Course: {{item.course}}</p> -->
+                        <p> {{item.designation}}</p>
+                        <img [src]="item.company_logo" alt="" style="margin-left: auto; margin-right: auto; width: 150px;">
+                        <div class="d-inline">
+                            <p class="d-inline">{{ item.miles_comment | slice:0:80 }}{{item.miles_comment.length > 80 ? '...' : ''}}</p>
+                            <input type="button" value="Read More" (click)="openLg(item)" style="border: none;background-color:transparent;color:#0044BA;">
+                        </div>
+                        <!-- <p>Organization: {{item.organization}}</p> -->
+
+                        <div class="d-flex align-items-start justify-content-between position-relative">
+                            <ng-container *ngIf="item.linkedin_url">
+                                <a [href]="item.linkedin_url" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!item.linkedin_url">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="fab fa-linkedin-in" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="item.email">
+                                <a href="{{'mailto:'+item.email}}" target="_blank" mdbWavesEffect class="icon mx-2">
+                                    <i class="far fa-envelope" style="color: #EA4335;"></i>
+                                </a>
+                            </ng-container>
+                            <ng-container *ngIf="!!!item.email">
+                                <a href="javascript:;" mdbWavesEffect disabled class="icon mx-2 disabled">
+                                    <i class="far fa-envelope" style="color: #bcbcbc; cursor: no-drop;"></i>
+                                </a>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { MainComponent } from './Component/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FacultyInfoComponent } from './Module/faculty-info/faculty-info.component';
+import { AluminiInfoComponent } from './Module/alumini-info/alumini-info.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FacultyInfoComponent } from './Module/faculty-info/faculty-info.compone
     NavbarComponent,
     FooterComponent,
     MainComponent,
+    AluminiInfoComponent,
   ],
   imports: [
     BrowserModule,
