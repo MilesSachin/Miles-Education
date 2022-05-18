@@ -132,6 +132,9 @@
     height: 100px;
 }
 ng-select{
-    width: 300px;
+    min-width: 300px;
     align-self: center;
+}
+.filter{
+    padding: 0 15%;
 }

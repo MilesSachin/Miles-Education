@@ -28,4 +28,6 @@ export class JobsService {
       this.companyListDataObserver.next(res.data)
     });
   }
+
+  
 }

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="pb-5 faculty">
+        <div class="container">
+            <div class="filter">
+                <div class="d-flex select justify-center filter">
+                    <ng-select [items]="universityFilter" [(ngModel)]="selectedUniversity" placeholder="Select University"
+                        bindLabel="uni_name" bindValue=uni_id class="company" (change)="universityList()">
+                    </ng-select>
+                    <ng-select [items]="locationFilter" [(ngModel)]="selectedLocation" placeholder="Select Location"
+                        bindLabel="city_lable" bindValue="city_value" class="location" (change)="universityList()">
+                    </ng-select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 pt-5 " *ngFor="let item of universityListCard">
+                    <div class="card" *ngFor="let meta of universityMetaListCard">
+                        <img [src]="meta.course_banner_path+item.course_banner" alt="" class="uni-img">
+                        <div class="text-center content">
+                            <p class="heading">{{item.university_name}},</p>
+                            <p class="body">{{item.university_city}}</p>
+                        </div>
+                        <div class="content">
+                            <p class="heading">{{item.course_name}}</p>
+                            <p class="body">(Integrated with {{item.subject_name}})</p>
+                        </div>
+                        <img [src]="meta.university_logo_path+item.university_logo" alt="" class="uni-logo ">
+                        <button class="button">View Program Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
