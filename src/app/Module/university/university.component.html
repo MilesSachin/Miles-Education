@@ -1,13 +1,13 @@
 <div class="container">
     <div class="pb-5 faculty">
         <div class="container">
-            <div class="filter">
-                <div class="d-flex select justify-center filter">
+            <div class="filter ">
+                <div class="d-flex select justify-center filter row">
                     <ng-select [items]="universityFilter" [(ngModel)]="selectedUniversity" placeholder="Select University"
-                        bindLabel="uni_name" bindValue=uni_id class="company" (change)="universityList()">
+                        bindLabel="uni_name" bindValue=uni_id class="company col-lg-6" (change)="universityList()">
                     </ng-select>
                     <ng-select [items]="locationFilter" [(ngModel)]="selectedLocation" placeholder="Select Location"
-                        bindLabel="city_lable" bindValue="city_value" class="location" (change)="universityList()">
+                        bindLabel="city_lable" bindValue="city_value" class="location col-lg-6" (change)="universityList()">
                     </ng-select>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                             <p class="body">(Integrated with {{item.subject_name}})</p>
                         </div>
                         <img [src]="meta.university_logo_path+item.university_logo" alt="" class="uni-logo ">
-                        <button class="button">View Program Details</button>
+                        <button class="button" onclick="item.link"> <a [href]="item.link" style="text-decoration: none; color:#fff;"> View Program Details</a></button>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 <div class="container">
     <div class=" faculty">
         <div class="filter">
-            <div class="d-flex select justify-center filter">
+            <div class="d-flex select justify-center filter row">
                 <ng-select [items]="company" [(ngModel)]="selectedCompany" placeholder="Select Company"
-                    bindLabel="company_lable" bindValue=company_value class="company" (change)="jobsList()">
+                    bindLabel="company_lable" bindValue=company_value class="company col-lg-6" (change)="jobsList()">
                 </ng-select>
                 <ng-select [items]="location" [(ngModel)]="selectedLocation" placeholder="Select Location"
-                    bindLabel="city_lable" bindValue="city_value" class="location" (change)="jobsList()">
+                    bindLabel="city_lable" bindValue="city_value" class="location col-lg-6" (change)="jobsList()">
                 </ng-select>
             </div>
         </div>
